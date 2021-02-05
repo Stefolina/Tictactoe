@@ -15,7 +15,6 @@ body {
 h1 {
     font-family: 'Rock Salt', cursive;
     display: flex;
-    margin-bottom: 40px;
     text-shadow:
     0 0 10px #FFFFFF,
     0 0 20px #FFFFFF,
@@ -24,6 +23,39 @@ h1 {
     0 0 70px rgb(253,170,92),
     0 0 80px rgb(253,170,92),
     0 0 100px rgb(253,170,92)
+}
+
+.playerSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 350px;
+    background-color: rgb(247, 240, 213);
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+.playerSection img {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.playerSection div {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+}
+
+h2 {
+    display: flex;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.player-inactive {
+    opacity: 0.2;
 }
 
 tr {
@@ -73,6 +105,58 @@ tr td:last-child {
 .d-none {
     display: none;
 }
+
+.horizontal-line {
+    position: absolute;
+    background-color: teal;
+    height: 10px;
+    width: 400px;
+    transform: scaleX(0.0);
+    transform: scaleY(0.0);
+    transition: transform 225ms ease-in-out;
+}
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+.gameover {
+    position: absolute;
+    left: 200px;
+    top: 80px;
+    z-index: 1;
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.restart-btn {
+    position: absolute;
+    background-color: rgb(255,249,153);
+    z-index: 1;
+    height: 80px;
+    width: 200px;
+    font-size: 30;
+    font-family: 'Balsamiq Sans', cursive;
+    cursor: pointer;
+    top: 150;
+    left: 500;
+}
+
+.restart-btn:hover {
+    background-color: rgb(225,125,151);
+}
+
 
 @media (max-width: 500px) {
 
